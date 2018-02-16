@@ -9,6 +9,9 @@
 # dependencies
 /node_modules
 
+# VSCode History
+/src/.history
+
 # IDEs and editors
 /.idea
 .project
@@ -41,4 +44,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
- /src/.history/ /.history/
