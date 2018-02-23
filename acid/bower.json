@@ -1,0 +1,21 @@
+{
+  "name": "acid",
+  "description": "",
+  "main": "main.ts",
+  "authors": [
+    "Drew Thompson <d_thompson6@u.pacific.edu>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/derwt/acid",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mdi": "^2.1.19"
+  }
+}

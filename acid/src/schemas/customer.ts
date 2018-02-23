@@ -68,4 +68,4 @@ next();
 // add comprehensive validation to 'unique' fields
 CustomerSchema.plugin(MongooseUniqueValidator);
 
-export const User: Model<ICustomerModel> = model<ICustomerModel>("Customer", CustomerSchema);
+export var Customer: Model<ICustomerModel> = model<ICustomerModel>("Customer", CustomerSchema);
