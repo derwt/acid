@@ -6,6 +6,7 @@ export class Customer {
     cross?: string;
     note?: string;
     name?: string;
+    type?: string;
     email?: string;
     ordered?: number;
     created?: number;
