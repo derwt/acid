@@ -1,0 +1,16 @@
+.container {
+    background-color: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    font-size: 15pt;
+}
+
+.spaced {
+    padding-right: 5px;
+}
