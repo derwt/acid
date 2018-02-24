@@ -1,7 +1,12 @@
 <div class="container">
-  <div class="left"></div>
-  <div class="right">
-    <p>{{customer.phone.length}}</p>
+  <div class="top" ngSwitch="{{searchType}}">
+    <i class="material-icons type">{{ accountIconTitle }}</i>
+    <div *ngSwitchCase="'phone'">{{ customer.phone[0] }}</div> 
+    <!-- TODO: For searchType: 'phone', set to searched phone number -->
+    <div *ngSwitchDefault>{{ customer[searchType] }}</div>
+  </div>
+  <div class="bottom">
+    <customer-icon iconType="email" [customer]="customer"></customer-icon>
     <p>{{customer.created | date}}</p>
   </div>
 </div>
