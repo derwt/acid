@@ -1,7 +1,7 @@
 <div class="container">
   <div class="top" ngSwitch="{{searchType}}">
     <i class="material-icons type">{{ accountIconTitle }}</i>
-    <div *ngSwitchCase="'phone'">{{ customer.phone[0] }}</div> 
+    <div *ngSwitchCase="'phone'">{{ customer.phone[0] | phone }}</div> 
     <!-- TODO: For searchType: 'phone', set to searched phone number -->
     <div *ngSwitchDefault>{{ customer[searchType] }}</div>
   </div>
