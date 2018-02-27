@@ -15,7 +15,7 @@ export class IdCardContainerComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.customers = CUSTOMERS;
+    this.customers = CUSTOMERS; // TODO: Pass in Customers from service call
   }
 
 }
