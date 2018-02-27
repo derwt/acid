@@ -15,7 +15,7 @@ export class CustomerIconComponent implements OnInit {
   iconTitle: string;
 
   options: string[];
-  iconTitles: string[];
+  titles: string[];
 
   isPhoneIcon: boolean;
 
@@ -25,18 +25,18 @@ export class CustomerIconComponent implements OnInit {
     this.options = [
       'cid', 'phone', 'city', 'address', 'cross',
       'note', 'name', 'email', 'ordered', 'created'];
-    this.iconTitles = [
-      'perm_identity', 'phone', 'location_city', 'location_on', 'map',
+    this.titles = [
+      'perm_identity', 'phone', 'location_city', 'home', 'map',
       'description', 'person_pin', 'email', 'access_time', 'create'];
     this.setIconTitle(this.iconType);
     this.isPhoneIcon = this.iconType == 'phone';
   }
 
   setIconTitle(type: string) {
-    this.iconTitle = this.iconTitles[this.options.indexOf(type)];
+    this.iconTitle = this.titles[this.options.indexOf(type)];
   }
 
-  public getPhonePosition() {
+  getPhonePosition() {
     switch (this.customer.phone.length) {
       case 1:
         return 'translate(-15px, 11%)';
