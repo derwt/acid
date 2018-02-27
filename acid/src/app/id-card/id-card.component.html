@@ -1,14 +1,11 @@
 <div class="container">
   <div class="top" ngSwitch="{{searchType}}">
     <i class="material-icons type">{{ accountIconTitle }}</i>
-    <div *ngSwitchCase="'phone'">{{ customer.phone[0] | phone }}</div> 
+    <div *ngSwitchCase="'phone'">{{ customer.phone[0] | phone }}</div>
     <!-- TODO: For searchType: 'phone', set to searched phone number -->
     <div *ngSwitchDefault>{{ customer[searchType] }}</div>
   </div>
   <div class="bottom">
-    <customer-icon iconType="ordered" [customer]="customer"></customer-icon>
-    <customer-icon iconType="phone" [customer]="customer"></customer-icon>
-    <customer-icon iconType="created" [customer]="customer"></customer-icon>
-    <customer-icon iconType="type" [customer]="customer"></customer-icon>
+    <customer-icon *ngFor="let property of iconPreferences" iconType="{{ property }}" [customer]="customer"></customer-icon>
   </div>
 </div>
