@@ -11,5 +11,12 @@ export var CUSTOMERS = [
         ordered: 10000002,
         created: 902900500000,
         type: 'Personal'
+    },
+    {
+        cid: 101,
+        phone: [6506785226, 3332221111, 3333334444],
+        address: "900 Place Avenue",
+        email: "play@li.chess",
+        name: 'Nerd'
     }
 ]
