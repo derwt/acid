@@ -8,13 +8,15 @@ import { IdCardComponent } from './id-card/id-card.component';
 import { CustomerIconComponent } from './customer-icon/customer-icon.component';
 
 import { PhonePipe } from '../pipes/phone.pipe';
+import { IdCardContainerComponent } from './id-card-container/id-card-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IdCardComponent,
     CustomerIconComponent,
-    PhonePipe
+    PhonePipe,
+    IdCardContainerComponent,
   ],
   imports: [
     BrowserModule,

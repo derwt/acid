@@ -6,6 +6,6 @@
     <div *ngSwitchDefault>{{ customer[searchType] }}</div>
   </div>
   <div class="bottom">
-    <customer-icon *ngFor="let property of iconPreferences" iconType="{{ property }}" [customer]="customer"></customer-icon>
+    <customer-icon *ngFor="let property of filterIcons(iconPreferences)" iconType="{{ property }}" [customer]="customer"></customer-icon>
   </div>
 </div>

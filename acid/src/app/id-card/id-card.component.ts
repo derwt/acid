@@ -3,8 +3,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Customer } from '../customer';
 import { IconPreferences } from '../icon.preferences';
 
-import { CUSTOMERS } from '../CUSTOMERS';
-
 @Component({
   selector: 'id-card',
   templateUrl: './id-card.component.html',
@@ -14,18 +12,19 @@ import { CUSTOMERS } from '../CUSTOMERS';
 export class IdCardComponent implements OnInit {
 
   @Input() private searchType: string;
-
-  customer: Customer;
+  @Input() private customer: Customer;
 
   accountIconTitle: string;
   iconPreferences: string[];
-  
+
+  maxIcons: number;
+
   constructor() { }
 
   ngOnInit() {
-    this.customer = CUSTOMERS[0]; // TODO: Hook in actual customer instead of test data
     this.setAccountIconTitle(this.customer.type);
     this.iconPreferences = IconPreferences;
+    this.maxIcons = 4;
   }
 
   setAccountIconTitle(type: string) {
@@ -41,6 +40,10 @@ export class IdCardComponent implements OnInit {
         this.setAccountIconTitle(this.customer.type);
         break;
     }
+  }
+
+  filterIcons() {
+    return this.iconPreferences.filter(property => this.customer[property]).slice(0, this.maxIcons);
   }
 
 }
