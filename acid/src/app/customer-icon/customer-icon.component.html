@@ -8,6 +8,8 @@
             <tr *ngFor="let number of customer.phone">{{ number | phone }}</tr>
           </table>
         </div>
+        <div *ngSwitchCase="'ordered'">{{ customer[iconType] | date }}</div>
+        <div *ngSwitchCase="'created'">{{ customer[iconType] | date }}</div>
         <div *ngSwitchDefault>{{ customer[iconType] }}</div>
       </div>
     </div>
