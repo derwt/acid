@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { Customer } from '../customer';
+import { IconPreferences } from '../icon.preferences';
+
+import { CUSTOMERS } from '../CUSTOMERS';
 
 @Component({
   selector: 'id-card',
@@ -12,24 +15,17 @@ export class IdCardComponent implements OnInit {
 
   @Input() private searchType: string;
 
-  customer: Customer = {
-    cid: 100,
-    phone: [6501234444, 1112223333],
-    city: "BL",
-    address: "2700 Yosemite Drive",
-    cross: "Ralston Ave",
-    email: "michael@pizza.face",
-    ordered: 10000002,
-    created: 902900500000,
-    type: 'Personal'
-  };
+  customer: Customer;
 
   accountIconTitle: string;
-
+  iconPreferences: string[];
+  
   constructor() { }
 
   ngOnInit() {
+    this.customer = CUSTOMERS[0]; // TODO: Hook in actual customer instead of test data
     this.setAccountIconTitle(this.customer.type);
+    this.iconPreferences = IconPreferences;
   }
 
   setAccountIconTitle(type: string) {
