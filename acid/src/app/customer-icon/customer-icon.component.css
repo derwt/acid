@@ -36,6 +36,7 @@
   box-shadow: 3px 3px 2px #eee;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
+  white-space: nowrap;
 }
 
 .tooltip:before {
