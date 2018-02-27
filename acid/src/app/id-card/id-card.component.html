@@ -6,7 +6,9 @@
     <div *ngSwitchDefault>{{ customer[searchType] }}</div>
   </div>
   <div class="bottom">
-    <customer-icon iconType="email" [customer]="customer"></customer-icon>
-    <p>{{customer.created | date}}</p>
+    <customer-icon iconType="ordered" [customer]="customer"></customer-icon>
+    <customer-icon iconType="phone" [customer]="customer"></customer-icon>
+    <customer-icon iconType="ordered" [customer]="customer"></customer-icon>
+    <customer-icon iconType="type" [customer]="customer"></customer-icon>
   </div>
 </div>

@@ -1,7 +1,15 @@
-<div class="container">
+<div class="container" (mouseover)="hover=true" (mouseleave)="hover=false">
   <i class="material-icons">{{ iconTitle }}</i>
-  <div ngSwitch="{{iconInfo}}">
-    <!-- <div class="spaced" *ngSwitchCase="'phone'">{{ customer.phone.length }}</div> -->
-    <!-- <div *ngSwitchDefault>{{ customer[iconInfo] }}</div> -->
+  <div class="parent">
+    <div class="tooltip" [ngClass]="{'hiding': !hover}" [style.transform]="isPhoneIcon ? getPhonePosition() : null">
+      <div ngSwitch="{{ iconType }}">
+        <div *ngSwitchCase="'phone'" class="numbers">
+          <table>
+            <tr *ngFor="let number of customer.phone">{{ number | phone }}</tr>
+          </table>
+        </div>
+        <div *ngSwitchDefault>{{ customer[iconType] }}</div>
+      </div>
+    </div>
   </div>
 </div>
