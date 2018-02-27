@@ -37,6 +37,7 @@
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
   white-space: nowrap;
+  z-index: 5;
 }
 
 .tooltip:before {
