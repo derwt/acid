@@ -1,9 +1,10 @@
-// Order in which icons are displayed
-export var IconPreferences = [
-    'phone', 
-    'address', 
+/// Order in which icons are displayed
+export const IconPreferences = [
+    'phone',
+    'address',
+    'name',
     'city',
-    'ordered', 
-    'email', 
+    'ordered',
+    'email',
     'created'
-]
+];

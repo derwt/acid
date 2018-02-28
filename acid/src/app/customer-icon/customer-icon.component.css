@@ -1,5 +1,4 @@
 .container {
-  background-color: green;
   color: white;
   display: flex;
   align-items: center;
@@ -10,6 +9,15 @@
   width: 24px;
   font-size: 15pt;
   position: relative;
+  box-shadow: 1px 1px 4px 0px rgba(102,102,102,1);
+}
+
+.container i {
+  cursor: default;
+}
+
+div {
+  cursor: default;
 }
 
 .parent {

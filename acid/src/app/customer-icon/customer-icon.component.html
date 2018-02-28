@@ -1,4 +1,4 @@
-<div class="container" (mouseover)="hover=true" (mouseleave)="hover=false">
+<div class="container" (mouseover)="hover=true" (mouseleave)="hover=false" [style.background-color]="getIconColor()">
   <i class="material-icons">{{ iconTitle }}</i>
 </div>
 <div class="parent">
@@ -9,8 +9,8 @@
           <tr *ngFor="let number of customer.phone">{{ number | phone }}</tr>
         </table>
       </div>
-      <div *ngSwitchCase="'ordered'">{{ customer[iconType] | date }}</div>
-      <div *ngSwitchCase="'created'">{{ customer[iconType] | date }}</div>
+      <div *ngSwitchCase="'ordered'">Ordered {{ customer[iconType] * 1000 | date }}</div>
+      <div *ngSwitchCase="'created'">Created {{ customer[iconType] * 1000 | date }}</div>
       <div *ngSwitchDefault>{{ customer[iconType] }}</div>
     </div>
   </div>
