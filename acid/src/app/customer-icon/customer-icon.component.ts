@@ -1,12 +1,25 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Customer } from '../customer';
 import { MEDIUM } from '../colors';
 
 @Component({
   selector: 'app-customer-icon',
   templateUrl: './customer-icon.component.html',
-  styleUrls: ['./customer-icon.component.css']
+  styleUrls: ['./customer-icon.component.css'],
+  animations: [
+    trigger('fadeInOut', [
+      transition('void => *', [
+        style({ opacity: 0 }),
+        animate(300, style({ opacity: 1 }))
+      ]),
+      transition('* => void', [
+        animate(300, style({ opacity: 0 }))
+      ])
+    ])
+  ]
 })
+
 export class CustomerIconComponent implements OnInit {
 
   @Input() private iconType: string;

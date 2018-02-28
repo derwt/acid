@@ -20,6 +20,8 @@ export class IdCardComponent implements OnInit {
 
   maxIcons: number;
   headerColor: string;
+  outline: Object;
+
 
   constructor() { }
 
@@ -28,6 +30,10 @@ export class IdCardComponent implements OnInit {
     this.iconPreferences = IconPreferences;
     this.maxIcons = 4;
     this.headerColor = COLORS.MEDIUM.red;
+    this.outline = {
+      color: COLORS.ACCENT.blue,
+      width: '3px'
+    };
   }
 
   setAccountIconTitle(type: string) {

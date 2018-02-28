@@ -12,10 +12,6 @@
   box-shadow: 1px 1px 4px 0px rgba(102,102,102,1);
 }
 
-.container i {
-  cursor: default;
-}
-
 div {
   cursor: default;
 }
@@ -54,8 +50,4 @@ div {
   left: calc(50% - 6px);
   position: absolute;
   z-index: 99;
-}
-
-.hiding {
-  opacity: 0;
 }

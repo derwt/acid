@@ -2,7 +2,7 @@
   <i class="material-icons">{{ iconTitle }}</i>
 </div>
 <div class="parent">
-  <div class="tooltip" [ngClass]="{'hiding': !hover}" [style.transform]="isPhoneIcon ? getPhonePosition() : null">
+  <div class="tooltip" *ngIf="hover" [@fadeInOut] [style.transform]="isPhoneIcon ? getPhonePosition() : null">
     <div ngSwitch="{{ iconType }}">
       <div *ngSwitchCase="'phone'" class="numbers">
         <table>

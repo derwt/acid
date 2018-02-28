@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" (mouseover)="hover=true" (mouseleave)="hover=false" [style.outline]="hover ? outline.width + ' solid ' + outline.color: null">
   <div class="top" ngSwitch="{{ searchType }}" [style.background-color]="headerColor">
     <i class="material-icons type">{{ accountIconTitle }}</i>
     <div *ngSwitchCase="'phone'">{{ customer.phone[0] | phone }}</div>
