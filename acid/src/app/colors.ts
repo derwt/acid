@@ -1,3 +1,14 @@
+export const ACCENT = {
+    blue: '#1E8BC3'
+};
+
+export const DARK = {
+    red: '#96281B'
+};
+
+export const LIGHT = {
+};
+
 export const MEDIUM = {
     black: '#000',
     blue: '#1E8BC3',
@@ -10,14 +21,8 @@ export const MEDIUM = {
     red: '#b33020'
 };
 
-export const DARK = {
-    red: '#96281B'
-};
-
-export const LIGHT = {
-};
-
 export const COLORS = {
+    ACCENT,
     DARK,
     LIGHT,
     MEDIUM
