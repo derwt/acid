@@ -39,15 +39,15 @@ export class CustomerIconComponent implements OnInit {
   getPhonePosition() {
     switch (this.customer.phone.length) {
       case 1:
-        return 'translate(-15px, 11%)';
+        return 'translateY(11%)';
       case 2:
-        return 'translate(-15px, 47%)';
+        return 'translateY(47%)';
       case 3:
-        return 'translate(-15px, 65%)';
+        return 'translateY(65%)';
       case 4:
-        return 'translate(-15px, 79px)';
+        return 'translateY(79px)';
       case 5:
-        return 'translate(-15px, 76%)';
+        return 'translateY(76%)';
       default:
         break;
     }
