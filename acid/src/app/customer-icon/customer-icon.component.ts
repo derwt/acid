@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Customer } from '../customer';
-import { COLORS } from '../colors';
+import { MEDIUM } from '../colors';
 
 @Component({
   selector: 'app-customer-icon',
@@ -59,7 +59,7 @@ export class CustomerIconComponent implements OnInit {
 
   getIconColor() {
     const key = this.colors[this.options.indexOf(this.iconType)];
-    return COLORS[key];
+    return MEDIUM[key];
   }
 
 }

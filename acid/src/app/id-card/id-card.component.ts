@@ -27,7 +27,7 @@ export class IdCardComponent implements OnInit {
     this.setAccountIconTitle(this.customer.type);
     this.iconPreferences = IconPreferences;
     this.maxIcons = 4;
-    this.headerColor = COLORS.red;
+    this.headerColor = COLORS.MEDIUM.red;
   }
 
   setAccountIconTitle(type: string) {
