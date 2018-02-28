@@ -4,7 +4,7 @@ import { Customer } from '../customer';
 import { CUSTOMERS } from '../CUSTOMERS';
 
 @Component({
-  selector: 'id-card-container',
+  selector: 'app-id-card-container',
   templateUrl: './id-card-container.component.html',
   styleUrls: ['./id-card-container.component.css']
 })

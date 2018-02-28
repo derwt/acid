@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Customer } from '../customer';
-
+import { COLORS } from '../colors';
 
 @Component({
-  selector: 'customer-icon',
+  selector: 'app-customer-icon',
   templateUrl: './customer-icon.component.html',
   styleUrls: ['./customer-icon.component.css']
 })
@@ -16,6 +16,7 @@ export class CustomerIconComponent implements OnInit {
 
   options: string[];
   titles: string[];
+  colors: string[];
 
   isPhoneIcon: boolean;
 
@@ -28,8 +29,11 @@ export class CustomerIconComponent implements OnInit {
     this.titles = [
       'perm_identity', 'phone', 'location_city', 'home', 'map',
       'description', 'person_pin', 'email', 'access_time', 'create'];
+    this.colors = [
+      'black', 'blue', 'orange', 'green', 'gray',
+      'gray', 'red', 'purple', 'pink', 'gold'];
     this.setIconTitle(this.iconType);
-    this.isPhoneIcon = this.iconType == 'phone';
+    this.isPhoneIcon = this.iconType === 'phone';
   }
 
   setIconTitle(type: string) {
@@ -51,6 +55,11 @@ export class CustomerIconComponent implements OnInit {
       default:
         break;
     }
+  }
+
+  getIconColor() {
+    const key = this.colors[this.options.indexOf(this.iconType)];
+    return COLORS[key];
   }
 
 }

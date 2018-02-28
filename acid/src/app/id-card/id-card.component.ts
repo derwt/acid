@@ -2,9 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { Customer } from '../customer';
 import { IconPreferences } from '../icon.preferences';
+import { COLORS } from '../colors';
 
 @Component({
-  selector: 'id-card',
+  selector: 'app-id-card',
   templateUrl: './id-card.component.html',
   styleUrls: ['./id-card.component.css']
 })
@@ -18,6 +19,7 @@ export class IdCardComponent implements OnInit {
   iconPreferences: string[];
 
   maxIcons: number;
+  headerColor: string;
 
   constructor() { }
 
@@ -25,6 +27,7 @@ export class IdCardComponent implements OnInit {
     this.setAccountIconTitle(this.customer.type);
     this.iconPreferences = IconPreferences;
     this.maxIcons = 4;
+    this.headerColor = COLORS.red;
   }
 
   setAccountIconTitle(type: string) {
