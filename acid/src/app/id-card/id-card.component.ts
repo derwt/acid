@@ -12,16 +12,17 @@ import { COLORS } from '../colors';
 
 export class IdCardComponent implements OnInit {
 
-  @Input() private searchType: string;
-  @Input() private customer: Customer;
+  @Input() searchType: string;
+  @Input() customer: Customer;
 
   accountIconTitle: string;
   iconPreferences: string[];
 
   maxIcons: number;
   headerColor: string;
-  outline: Object;
 
+  outline;
+  hover: boolean;
 
   constructor() { }
 

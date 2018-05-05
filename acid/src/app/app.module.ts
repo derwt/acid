@@ -10,6 +10,7 @@ import { CustomerIconComponent } from './customer-icon/customer-icon.component';
 
 import { PhonePipe } from '../pipes/phone.pipe';
 import { IdCardContainerComponent } from './id-card-container/id-card-container.component';
+import { SearchCreateEditContainerComponent } from './search-create-edit-container/search-create-edit-container.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { IdCardContainerComponent } from './id-card-container/id-card-container.
     CustomerIconComponent,
     PhonePipe,
     IdCardContainerComponent,
+    SearchCreateEditContainerComponent,
   ],
   imports: [
     BrowserModule,

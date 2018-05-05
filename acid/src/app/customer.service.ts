@@ -3,7 +3,7 @@ import { MongoClient } from 'mongodb';
 
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-import Customer = require('../schemas/customer');
+// import Customer = require('../schemas/customer');
 
 const URL = 'mongodb://localhost:27017/avantiCD';
 

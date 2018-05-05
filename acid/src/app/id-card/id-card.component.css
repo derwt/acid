@@ -23,9 +23,9 @@
 }
 
 .bottom {
-  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: space-around;
   align-items: center;
-  justify-content: space-evenly;
   background-color: #efefef;
   width: 100%;
   height: 70%;

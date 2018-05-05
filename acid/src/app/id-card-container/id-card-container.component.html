@@ -1,1 +1,6 @@
-<app-id-card *ngFor="let customer of customers" searchType="phone" [customer]="customer"></app-id-card>
+<div class="container">
+  <app-id-card *ngFor="let customer of customers" searchType="phone" [customer]="customer" (click)="select(customer)"></app-id-card>
+</div>
+<div *ngIf="selected">
+  <div *ngFor="let property of generateArray(selected)">{{property}}</div>
+</div>

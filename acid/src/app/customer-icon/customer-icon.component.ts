@@ -22,8 +22,8 @@ import { MEDIUM } from '../colors';
 
 export class CustomerIconComponent implements OnInit {
 
-  @Input() private iconType: string;
-  @Input() private customer: Customer;
+  @Input() iconType: string;
+  @Input() customer: Customer;
 
   iconTitle: string;
 
@@ -31,6 +31,7 @@ export class CustomerIconComponent implements OnInit {
   titles: string[];
   colors: string[];
 
+  hover: boolean;
   isPhoneIcon: boolean;
 
   constructor() { }
